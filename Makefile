@@ -344,13 +344,13 @@ CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 #CFLAGS_MODULE   = -O2 -mcpu=cortex-a9 -mtune=cortex-a9 -mfpu=vfpv3-d16 -ftree-vectorize -mfloat-abi=hard -ffast-math -fsingle-precision-constant -marm -mstructure-size-boundary=32 --param l2-cache-size=1024 -ftree-vectorize -funswitch-loops
 
 ifeq ($(OPTI),3)
-CFLAGS_MODULE   =   -mcpu=cortex-a9 -mtune=cortex-a9 -mfpu=vfpv3-d16 -ftree-vectorize -mfloat-abi=hard -ffast-math -fsingle-precision-constant -marm  --param l2-cache-size=1024 -ftree-vectorize -funswitch-loops  -Wno-unused-but-set-variable -mno-unaligned-access -fno-pic
+CFLAGS_MODULE   =   -mcpu=cortex-a9 -mtune=cortex-a9 -mfpu=vfpv3-d16 -ftree-vectorize -mfloat-abi=hard -ffast-math -fsingle-precision-constant -marm  --param l2-cache-size=1024 -ftree-vectorize -funswitch-loops  -Wno-unused-but-set-variable -fno-pic
 endif
 
 
 ##opt
 ifeq ($(OPTI),2)
-CFLAGS_MODULE   =   -mcpu=cortex-a9 -mtune=cortex-a9 -mfpu=vfpv3-d16 -ftree-vectorize -mfloat-abi=softfp -ffast-math -fsingle-precision-constant -marm  --param l2-cache-size=1024 -ftree-vectorize -funswitch-loops  -Wno-unused-but-set-variable -mno-unaligned-access -fno-pic
+CFLAGS_MODULE   =   -mcpu=cortex-a9 -mtune=cortex-a9 -mfpu=vfpv3-d16 -ftree-vectorize -mfloat-abi=softfp -ffast-math -fsingle-precision-constant -marm  --param l2-cache-size=1024 -ftree-vectorize -funswitch-loops  -Wno-unused-but-set-variable -fno-pic
 endif
 
 ##normal
